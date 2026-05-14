@@ -16,13 +16,6 @@
   It extends DEIM/D-FINE by introducing refinement-driven, density-aware adaptive querying.
 </p>
 
----
-
-<p align="center">
-  <img src="./figures/RDAQ.png" alt="RDAQ Framework" width="85%">
-</p>
-
----
 
 ## 1. Introduction
 
@@ -51,9 +44,7 @@ Together, these form:
 
 > **A closed loop of: refinement → density estimation → density-aware dynamic querying**
 
-<p align="center">
-  <img src="./figures/HSF.png" alt="HSF Module" width="75%">
-</p>
+
 
 
 
