@@ -185,7 +185,7 @@ If you use this repository, please cite:
 ```latex
 @misc{rdaq2025,
   title  = {RDAQ: Real Time DETR meets Refinement-Driven Adaptive Querying for Dense Aerial Imagery},
-  year   = {2025}
+  year   = {2026}
 }
 ```
 
