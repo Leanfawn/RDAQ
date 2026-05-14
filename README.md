@@ -96,7 +96,7 @@ pycocotools==2.0.8
 RDAQ supports the following datasets:
 
 * **DOTA-v1.0**
-* **AI-TOD**
+* **AI-TODv2**
 
 Please structure datasets as:
 
@@ -112,7 +112,7 @@ datasets/
       instances_val.json
       instances_test.json
 
-  AI-TOD/
+  AI-TODv2/
     images/
       train/
       val/
@@ -129,7 +129,7 @@ Modify dataset configs accordingly (examples in `configs/dataset/`).
 
 ## 4. Training & Evaluation
 
-### 4.1 Train RDAQ-DFINE-X on VisDrone
+### 4.1 Train RDAQ-DFINE-X on DOTA-v1.0
 
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 \
