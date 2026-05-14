@@ -1,4 +1,3 @@
-
 <h2 align="center">
   RDAQ: Real Time DETR meets Refinement-Driven Adaptive Querying for Dense Aerial Imagery
 </h2>
