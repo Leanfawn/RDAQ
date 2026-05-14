@@ -95,14 +95,14 @@ pycocotools==2.0.8
 
 RDAQ supports the following datasets:
 
-* **VisDrone2019**
+* **DOTA-v1.0**
 * **AI-TOD**
 
 Please structure datasets as:
 
 ```text
 datasets/
-  VisDrone2019/
+  DOTA-v1.0/
     images/
       train/
       val/
@@ -134,7 +134,7 @@ Modify dataset configs accordingly (examples in `configs/dataset/`).
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 \
 torchrun --master_port=7777 --nproc_per_node=4 train.py \
-  -c configs/rdaq_dfine/rdaq_dfine_x_visdrone.yml \
+  -c configs/rdaq_dfine/rdaq_dfine_x_dota.yml \
   --use-amp \
   --seed=0
 ```
@@ -144,7 +144,7 @@ torchrun --master_port=7777 --nproc_per_node=4 train.py \
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 \
 torchrun --master_port=7777 --nproc_per_node=4 train.py \
-  -c configs/rdaq_dfine/rdaq_dfine_x_visdrone.yml \
+  -c configs/rdaq_dfine/rdaq_dfine_x_dota.yml \
   --test-only \
   -r path/to/your_rdaq_model.pth
 ```
@@ -153,7 +153,7 @@ torchrun --master_port=7777 --nproc_per_node=4 train.py \
 
 ```bash
 torchrun --nproc_per_node=4 train.py \
-  -c configs/rdaq_dfine/rdaq_dfine_x_visdrone.yml \
+  -c configs/rdaq_dfine/rdaq_dfine_x_dota.yml \
   -t path/to/ckpt.pth
 ```
 
