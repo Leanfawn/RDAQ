@@ -1,0 +1,85 @@
+__include__: [
+  '../dataset/custom_detection.yml',
+  '../runtime.yml',
+  '../base/dataloader.yml',
+  '../base/optimizer.yml',
+  '../base/rdaq_main.yml'
+]
+
+output_dir: ./outputs/rdaq_x
+
+
+RDAQ:
+  backbone: HGNetv2
+
+HGNetv2:
+  name: 'B5'
+  return_idx: [1, 2, 3]
+  freeze_stem_only: True
+  freeze_at: 0
+  freeze_norm: True
+
+HybridEncoder:
+  # intra
+  hidden_dim: 384
+  dim_feedforward: 2048
+
+RDAQ_Decoder:
+  feat_channels: [384, 384, 384]
+  feat_strides: [8, 16, 32]
+  hidden_dim: 256
+  num_levels: 3
+
+  num_layers: 6
+  eval_idx: -1
+  num_queries: 300
+
+  num_denoising: 100
+  label_noise_ratio: 0.5
+  box_noise_scale: 1.0
+
+  reg_max: 32
+  reg_scale: 4
+
+  layer_scale: 1  # 2
+
+
+  num_points: [3, 6, 3] 
+  cross_attn_method: default 
+  query_select_method: default 
+
+  dim_feedforward: 1024
+
+  dynamic_query_list: [300, 500, 900, 1500]
+  ccm_cls_num: 4
+
+optimizer:
+  type: AdamW
+  params:
+    -
+      params: '^(?=.*backbone)(?!.*norm|bn).*$'
+      lr: 0.0000025
+    -
+      params: '^(?=.*(?:encoder|decoder))(?=.*(?:norm|bn)).*$'
+      weight_decay: 0.
+
+  lr: 0.00025
+  betas: [0.9, 0.999]
+  weight_decay: 0.000125
+
+
+epoches: 120 
+train_dataloader:
+  dataset:
+    transforms:
+      policy:
+        epoch: 108
+  collate_fn:
+    stop_epoch: 108
+    ema_restart_decay: 0.9998
+    base_size_repeat: 3
+  total_batch_size: 16
+
+val_dataloader:
+  total_batch_size: 4
+
