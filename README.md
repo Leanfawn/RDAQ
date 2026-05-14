@@ -2,7 +2,14 @@
   RDAQ: Real Time DETR meets Refinement-Driven Adaptive Querying for Dense Aerial Imagery
 </h2>
 
-
+<p align="center">
+    <a href="./LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/LICENSE-Apache%202.0-blue">
+    </a>
+    <a href="https://github.com/yourname/RDAQ">
+        <img alt="stars" src="https://img.shields.io/github/stars/yourname/RDAQ">
+    </a>
+</p>
 
 <p align="center">
   RDAQ is a real-time DETR-based detector designed for dense small object detection in low-altitude UAV imagery.  
