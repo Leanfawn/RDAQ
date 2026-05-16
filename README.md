@@ -33,7 +33,7 @@ To address these issues, we propose **RDAQ**, a *Refinement-Driven Adaptive Quer
 #### ⭐ HSF — Hierarchical Squeeze-Fusion
 A top-down refinement module that uses high-level semantics to explicitly activate tiny-object regions in shallow feature maps.
 
-#### ⭐ DGRE — Density Guided Routing Estimat Module
+#### ⭐ DGRE — Density Guided Routing Estimation Module
 Reformulates counting as a **coarse-grained classification**.  
 DGRE predicts density level and dynamically decides the **number of decoder queries** per image.
 
@@ -162,7 +162,7 @@ You can toggle them through config:
 ```yaml
 model:
   use_hsf: true
-  use_ccm: true
+  use_dgre: true
   use_dddf: true
 ```
 
