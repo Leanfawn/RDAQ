@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="./LICENSE">
-        <img alt="license" src="https://img.shields.io/badge/LICENSE-Apache%202.0-blue">
+        <img alt="license" src="[https://img.shields.io/badge/LICENSE-Apache%202.0-blue](https://ieeexplore.ieee.org/document/11711036)">
     </a>
     <a href="https://github.com/yourname/RDAQ">
         <img alt="stars" src="https://img.shields.io/github/stars/yourname/RDAQ">
