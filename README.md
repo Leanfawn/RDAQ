@@ -6,16 +6,11 @@
   <a href="https://ieeexplore.ieee.org/document/11711036">
     <img alt="IEEE GRSL 2026" src="https://img.shields.io/badge/IEEE%20GRSL-2026-00629B">
   </a>
-  <a href="https://doi.org/10.1109/LGRS.2026.3734989">
-    <img alt="DOI" src="https://img.shields.io/badge/DOI-10.1109%2FLGRS.2026.3734989-blue">
-  </a>
   <a href="./LICENSE">
     <img alt="License" src="https://img.shields.io/badge/LICENSE-Apache%202.0-blue">
   </a>
-  <a href="https://github.com/Leanfawn/RDAQ">
-    <img alt="stars" src="https://img.shields.io/github/stars/Leanfawn/RDAQ">
-  </a>
 </p>
+
 
 
 ## 1. Introduction
